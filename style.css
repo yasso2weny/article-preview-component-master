@@ -1,0 +1,178 @@
+/*  (-CSS reset- Credit: Josh Comeau ) */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --primary: hsl(217, 19%, 35%);
+  --two: hsl(214, 17%, 51%);
+  --three: hsl(212, 23%, 69%);
+  --bg-color: hsl(210, 46%, 95%);
+
+  --ff-base: "Manrope", sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
+body {
+  /* display: grid;
+  place-items: center;
+  min-height: 100vh; */
+  margin-inline: 25%;
+  margin-block: 10%;
+
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 0.8125rem;
+  background-color: var(--bg-color);
+}
+
+#card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  border-radius: 0.9375rem;
+  background-color: white;
+  margin: 0.75rem 0.75rem;
+}
+
+#product-image {
+  border-radius: 0.9375rem 0.9375rem 0 0;
+}
+
+#description-bold {
+  font-weight: var(--fw-bold);
+  font-size: 1.25rem;
+  padding: 0 2.9375rem;
+}
+
+#description-regular {
+  padding: 0 2.9375rem;
+  margin: 0.9375rem 0;
+}
+
+#card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.9375rem;
+  padding: 0 2.9375rem;
+  margin-bottom: 1.25rem;
+}
+
+#avatar {
+  border-radius: 3.125rem;
+  width: 3.125rem;
+}
+
+#name {
+  font-weight: var(--fw-bold);
+}
+
+#share {
+  border-radius: 3.125rem;
+  background-image: url("images/icon-share.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  padding: 0.875rem;
+  border: none;
+  background-color: var(--bg-color);
+
+  margin-left: auto;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+/* 
+
+#share-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 10px;
+  background-color: var(--primary);
+  padding: 12px 35px;
+  width: 30%;
+  z-index: 1;
+}
+
+#share-wrapper-title {
+  color: var(--three);
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-size: 0.75rem;
+} */
+
+@media (min-width: 600px) {
+  #card {
+    flex-direction: row;
+    width: 725px;
+    gap: 0.3125rem;
+  }
+
+  #product-image {
+    border-radius: 0.9375rem 0 0 0.9375rem;
+    width: 300px;
+    object-fit: cover;
+  }
+
+  #product-description {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 24px 0;
+
+  }
+
+  #description-regular {
+    margin-top: 0;
+  }
+
+  #card-footer {
+    margin-bottom: 0;
+  }
+}
